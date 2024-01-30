@@ -1,34 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let button = document.getElementById("changeContentButton");
-    let outputDiv = document.getElementById("output");
-    let textInput = document.getElementById("textInput");
+const note = document.querySelector('.notes');
+const createBtn = document.getElementById('create');
 
-    button.addEventListener("click", function() {
-        outputDiv.innerHTML = "Content changed with Click!";
-    });
+createBtn.addEventListener('click', () => {
+    let createDiv=document.createElement("div");
+    note.appendChild(createDiv);
+    createDiv.className = "textBox";
+    let inputBox = document.createElement("textarea");
+    let del = document.createElement("button");
+    del.textContent = "Delete"; 
+    del.id = "delete"; 
+    createDiv.appendChild(inputBox);
+    createDiv.appendChild(del);
+});
 
-    outputDiv.addEventListener("mouseover", function() {
-        this.style.color = 'red';
-    });
-
-    outputDiv.addEventListener("mouseout", function() {
-        this.style.color = 'black';
-    });
-
-    outputDiv.addEventListener("dblclick", function() {
-        this.style.backgroundColor = this.style.backgroundColor === 'yellow' ? 'transparent' : 'yellow';
-    });
-
-    outputDiv.addEventListener("contextmenu", function(event) {
-        event.preventDefault();
-        this.innerHTML = "Right-click detected!";
-    });
-
-    textInput.addEventListener("focus", function() {
-        this.classList.add("focused");
-    });
-
-    textInput.addEventListener("blur", function() {
-        this.classList.remove("focused");
-    });
+note.addEventListener("click", function(event) {
+    if (event.target.id === "delete") {
+        event.target.parentElement.remove();
+    }
 });

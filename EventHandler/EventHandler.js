@@ -1,21 +1,25 @@
-document.getElementById("myButton").addEventListener("click", function() {
-    document.getElementById("demo").innerHTML = "You clicked the button!";
-});
+function mouseDown(obj) {
+    obj.style.width = "200px";
+    obj.style.height = "100px";
+    obj.innerHTML = "Release";
+    obj.style.backgroundColor="darkViolet";
+  }
 
-document.getElementById("hoverDiv").addEventListener("mouseover", function() {
+function mouseUp(obj) {
+    obj.style.width = "150px";
+    obj.style.height = "px";
+    obj.innerHTML = "Click";
+    obj.style.backgroundColor="green";
+  }
+
+document.getElementById("hover").addEventListener("mouseover", function() {
     this.style.backgroundColor = "green";
 });
 
-document.getElementById("hoverDiv").addEventListener("mouseout", function() {
-    this.style.backgroundColor = "blue";
+document.getElementById("hover").addEventListener("mouseout", function() {
+    this.style.backgroundColor = "darkKhaki";
 });
 
-document.addEventListener("dblclick", function() {
-    document.body.style.backgroundColor = document.body.style.backgroundColor === 'lightgrey' ? 'white' : 'lightgrey';
-});
-
-document.addEventListener("keydown", function(event) {
-    document.getElementById("keyInfo").innerHTML = `Key pressed: ${event.key} (Code: ${event.code})`;
-});
-
-
+document.getElementById("key").addEventListener("keydown",function(event){
+    alert(`You pressed ${event.key}`);
+})

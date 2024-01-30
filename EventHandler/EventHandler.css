@@ -1,34 +1,25 @@
 body {
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: white;
 }
 
-.container {
+div {
     width: 80%;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: lightgray;
     padding: 20px;
-    box-shadow: 0 5px 15px black;
+    box-shadow:0 5px 15px black;
 }
 
-button, #hoverDiv {
-    background-color: #007bff;
+button, #hover,#key {
+    background-color: darkGrey;
     color: white;
-    padding: 10px 20px;
-    margin: 10px 0;
+    padding: 10px;
+    margin: 10px;
     border: none;
     border-radius: 5px;
-
 }
 
-button:hover, #hoverDiv:hover {
-    background-color: #0056b3;
-}
-
-#dblClickParagraph, #keyInfo {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #e7e7e7;
-    border: 1px solid #dcdcdc;
-    border-radius: 5px;
+#hover:hover {
+    background-color: lightcyan;
 }

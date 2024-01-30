@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>EventHandler</title>
-    <link rel="stylesheet" type="text/css" href="EventHandler.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="EventHandler.css">
 </head>
 <body>
-
-<div class="container">
-    <h1>Welcome</h1>
-    <p id="demo">Click the button to change this text.</p>
-    <button id="myButton">Click Me</button>
-    
-    <div id="hoverDiv">Hover over me!</div>
-    <p id="dblClickParagraph">Double-click anywhere in this document to change background color.</p>
-    <p id="keyInfo">Press any key to see its code.</p>
-
-</div>
-
-<script src="EventHandler.js"></script>
+    <div>
+    <h1>Welcome to my interactive page</h1>
+    <button id="btn" onmousedown="mouseDown(this)" onmouseup="mouseUp(this)">Click me</button>
+    <p id="hover">Hover over me</p>
+    <input id="key">Type any character</input>
+    </div>
+    <script src="EventHandler.js"></script>
 </body>
 </html>
